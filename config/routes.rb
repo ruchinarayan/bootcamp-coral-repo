@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   get 'example' => 'static_pages#example'
-  get    '5a' =>'my_static_pages#5a'
-  get    '5b' =>'my_static_pages#5b'
+  get    'HW5a' =>'my_static_pages#HW5a'
+  get    'HW5b' =>'my_static_pages#HW5b'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
