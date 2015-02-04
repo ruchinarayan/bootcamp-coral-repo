@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   get 'example' => 'static_pages#example'
-
+  get 'movie-delete' => 'static_pages#movie-delete'
+  get 'movie-index' => 'static_pages#movie-index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
