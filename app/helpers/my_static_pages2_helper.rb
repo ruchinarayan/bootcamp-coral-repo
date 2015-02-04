@@ -1,0 +1,2 @@
+module MyStaticPages2Helper
+end

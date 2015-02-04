@@ -1,0 +1,9 @@
+require 'test_helper'
+
+class MyStaticPagesControllerTest < ActionController::TestCase
+  test "should get mfshamimTask2a" do
+    get :mfshamimTask2a
+    assert_response :success
+  end
+
+end
