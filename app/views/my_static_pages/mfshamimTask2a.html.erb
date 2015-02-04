@@ -1,0 +1,37 @@
+<!-- <h1>MyStaticPages#mfshamimTask3a</h1> -->
+<!-- <p>Find me in app/views/my_static_pages/mfshamimTask2a.html.erb</p>
+ -->
+ <% provide(:title, " Theater-Update ") %>
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<title>The Movie Recommender</title>
+</head>
+<H1>The Movie Recommender</H1>
+<H2>Update Theater</H2>
+<form action="demo_form.asp" method="get">
+<table>
+  <tr>
+    <td><li>Theater Name:</li></td>
+    <td><input type="text" name="tname" size="55"><br></td>
+  </tr>
+ <tr>
+    <td><li>Theater Address:</li></td>
+    <td><input type="text" name="taddress"size="55"><br></td>
+  </tr>
+ <tr>
+    <td><li>Theater URL:</li></td>
+    <td><input type="text" name="tURL"size="55"><br></td>
+  </tr>
+ 
+    <td align="right"><button type="Update" value="Update">Update</button></td>
+    <td><button type="Cancel" value="Cancel">Cancel</button><br></td>
+  
+</table>
+</form>
+<p><i>Update theater Information and click Update</i></p>
+<hr>
+<%= link_to "Home", root_path %>
+</body>
+</html>
