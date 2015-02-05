@@ -1,10 +1,10 @@
 class MovieControllerController < ApplicationController
 
-	def AddMovieReview
+	def aAddMovieReview
 
 	end
 
-	def ViewMovieReview
+	def vViewMovieReview
 
 	end
 end
