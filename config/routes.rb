@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   get 'example' => 'static_pages#example'
+  get 'recommender1a' => 'the_movie_recommender#recommender1a'
+  get 'recommender1b' => 'the_movie_recommender#recommender1b'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

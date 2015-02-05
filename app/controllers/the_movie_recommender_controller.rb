@@ -1,8 +1,6 @@
 class TheMovieRecommenderController < ApplicationController
-	def home
+	def recommender1a
 	end
-	def recommender1
-	end
-	def recommender2
+	def recommender1b
 	end
 end
