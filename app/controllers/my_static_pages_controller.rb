@@ -1,6 +1,6 @@
 class MyStaticPagesController < ApplicationController
-	def HW5a
+	def hw5a
 	end
-	def HW5b
+	def hw5b
 	end
 end
