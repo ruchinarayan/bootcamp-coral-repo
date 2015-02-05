@@ -2,6 +2,7 @@ Rails.application.routes.draw do
  
   root 'static_pages#home' 
   get 'example' => 'static_pages#example'
+
   get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
   get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
 
@@ -10,6 +11,10 @@ Rails.application.routes.draw do
 
   get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
   get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
+
+  get 'hw5a' => 'my_static_pages#hw5a'
+  get 'hw5b' => 'my_static_pages#hw5b'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
