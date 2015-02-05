@@ -2,6 +2,8 @@ Rails.application.routes.draw do
  
   root 'static_pages#home' 
   get 'example' => 'static_pages#example'
+  get 'recommender1a' => 'the_movie_recommender#recommender1a'
+  get 'recommender1b' => 'the_movie_recommender#recommender1b'
 
   get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
   get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
