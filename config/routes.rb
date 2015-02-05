@@ -2,6 +2,8 @@ Rails.application.routes.draw do
  
   root 'static_pages#home' 
   get 'example' => 'static_pages#example'
+  get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
+  get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
 
   get 'movie-delete' => 'static_pages#movie-delete'
   get 'movie-index' => 'static_pages#movie-index'
