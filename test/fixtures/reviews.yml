@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id         :integer          not null, primary key
+#  stars      :integer
+#  title      :string
+#  commentary :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+queen:
+  stars: 5
+  title: queen
+  commentary: Movie
+
+two:
+  stars: 4
+  title: ABCD
+  commentary: Okay
