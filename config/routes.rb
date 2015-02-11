@@ -1,19 +1,16 @@
 Rails.application.routes.draw do
  
+
   root 'static_pages#home' 
   get 'example' => 'static_pages#example'
   get 'recommender1a' => 'the_movie_recommender#recommender1a'
   get 'recommender1b' => 'the_movie_recommender#recommender1b'
-
   get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
   get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
-
   get 'movie-delete' => 'static_pages#movie-delete'
   get 'movie-index' => 'static_pages#movie-index'
-
   get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
   get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
-
   get 'hw5a' => 'my_static_pages#hw5a'
   get 'hw5b' => 'my_static_pages#hw5b'
 

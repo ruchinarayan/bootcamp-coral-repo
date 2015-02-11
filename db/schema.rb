@@ -13,6 +13,7 @@
 
 
 
+
 ActiveRecord::Schema.define(version: 20150209185507) do
 
   create_table "theaters", force: :cascade do |t|
@@ -38,6 +39,16 @@ ActiveRecord::Schema.define(version: 20150207014448) do
     t.integer  "stars"
     t.string   "title"
     t.string   "commentary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
+
+ActiveRecord::Schema.define(version: 20150209191113) do
+
+  create_table "studios", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
 
