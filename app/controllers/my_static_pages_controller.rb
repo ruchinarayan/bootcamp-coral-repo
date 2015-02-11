@@ -1,4 +1,6 @@
 class MyStaticPagesController < ApplicationController
-  def mfshamimTask2a
-  end
+	def hw5a
+	end
+	def hw5b
+	end
 end

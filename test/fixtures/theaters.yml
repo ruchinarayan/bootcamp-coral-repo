@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: theaters
+#
+#  id              :integer          not null, primary key
+#  theater_name    :string
+#  theater_address :string
+#  theater_phone   :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  theater_name: MyString
+  theater_address: MyString
+  theater_phone: MyString
+
+two:
+  theater_name: MyString
+  theater_address: MyString
+  theater_phone: MyString

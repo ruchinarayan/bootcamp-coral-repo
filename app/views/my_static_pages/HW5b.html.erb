@@ -1,0 +1,63 @@
+<% provide(:title, " | Persons Index") %>
+<!DOCTYPE html>
+<html>
+<head>
+<!--<title><%= yield(:title) %> | Persons Index</title>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<h1>The Movie Recommender</h1>
+<p>
+<h2>Stars Index</h2>
+<p>
+<i>This page lists all stars in our database</i>
+<p>
+
+</head>
+<body>
+<table border="2" style="width:100%">
+    <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date of Birth</th>
+    <td rowspan="7" bgcolor="yellow"><center><b>All Users</b></center></td>
+    </tr>
+  <tr>
+    <td><center>Nicolas</center></td>
+    <td><center>Cage</center></td>
+    <td><center>Jan-07-1964</center></td>
+  </tr>
+  <tr>
+    <td><center>Sean</center></td>
+    <td><center>Connery</center></td>		
+    <td><center>Aug-25-1930</center></td>
+ </tr>
+   <tr>
+    <td><center>Morgan</center></td>
+    <td><center>Freeman</center></td>		
+    <td><center>Jun-1-1937</center></td>
+    </tr>
+   <tr>
+    <td><center>Bruce</center></td>
+    <td><center>Willis</center></td>		
+    <td><center>Mar-19-1955</center></td>
+    </tr>
+    <tr>
+    <td><center>Sandra</center></td>
+    <td><center>Bullock</center></td>
+    <td><center>Jul-26-1964</center></td>
+   </tr>
+    <tr>
+   <td><center>Johny</center></td>
+   <td><center>Depp</center></td>
+   <td><center>Jun-09-1963</center></td>
+   </tr>
+</table>
+
+<br>
+<hr>
+<%= link_to "Home", root_path %>
+</body>
+</html>
