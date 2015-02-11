@@ -2,11 +2,7 @@
 
 class MyStaticPagesControllerTest < ActionController::TestCase
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> hwtask
   test "should get mfshamimTask2a" do
    get :mfshamimTask2a
    assert_response :success
@@ -19,24 +15,11 @@ class MyStaticPagesControllerTest < ActionController::TestCase
 
   
 
-=======
-  test "should get mfshamimTask2a" do
-    get :mfshamimTask2a
-    assert_response :success
-  end
 
->>>>>>> hw4task
 
-  # test "the truth" do
-  #   assert true
-  # end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> hwtask
-=======
->>>>>>> hw4task
+
+
 end
 

@@ -11,19 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-
-
-ActiveRecord::Schema.define(version: 20150209185507) do
-
-  create_table "theaters", force: :cascade do |t|
-    t.string   "theater_name"
-    t.string   "theater_address"
-    t.string   "theater_phone"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-
-ActiveRecord::Schema.define(version: 20150209165320) do
+ActiveRecord::Schema.define(version: 20150209191113) do
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
@@ -31,9 +19,7 @@ ActiveRecord::Schema.define(version: 20150209165320) do
     t.date     "dob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
-
-ActiveRecord::Schema.define(version: 20150207014448) do
+  end
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "stars"
@@ -41,9 +27,7 @@ ActiveRecord::Schema.define(version: 20150207014448) do
     t.string   "commentary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
-
-ActiveRecord::Schema.define(version: 20150209191113) do
+  end
 
   create_table "studios", force: :cascade do |t|
     t.string   "name"
@@ -51,7 +35,14 @@ ActiveRecord::Schema.define(version: 20150209191113) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
 
+  create_table "theaters", force: :cascade do |t|
+    t.string   "theater_name"
+    t.string   "theater_address"
+    t.string   "theater_phone"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
