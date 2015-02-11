@@ -8,7 +8,7 @@
 #  dob        :date
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#
+# Task done by cpchmpll
 
 class Person < ActiveRecord::Base
 	
