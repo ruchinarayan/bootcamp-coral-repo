@@ -22,8 +22,13 @@ delete '/people/:id', to: 'people#destroy'
   get 'example' => 'static_pages#example'
   get 'recommender1a' => 'the_movie_recommender#recommender1a'
   get 'recommender1b' => 'the_movie_recommender#recommender1b'
+
+  # Start of code for Task4 added by rruchi
   get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
+  post 'aAddMovieReview' => 'movie_controller#submitMovieReview'
   get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
+  # End of code for Task4 added by rruchi
+
   get 'movie-delete' => 'static_pages#movie-delete'
   get 'movie-index' => 'static_pages#movie-index'
   get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
