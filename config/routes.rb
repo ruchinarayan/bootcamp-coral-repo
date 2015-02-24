@@ -1,40 +1,36 @@
-
-#cpchmpll
   Rails.application.routes.draw do
  
-
+root 'static_pages#home' 
 
 get '/people', to: 'people#index', as: 'people'
-
 get '/people/new', to: 'people#new', as: 'new_people'
 post '/people', to: 'people#create'
 
-  get '/people/:id', to: 'people#show', as: 'person'
-
+get '/people/:id', to: 'people#show', as: 'person'
 get '/people/:id/edit', to: 'people#edit', as: 'edit_person'
 patch '/people/:id', to: 'people#update'
 put '/people/:id', to: 'people#update'
 
 delete '/people/:id', to: 'people#destroy'
-=begin
->>>>>>> hw5-task5
-  root 'static_pages#home' 
-  get 'example' => 'static_pages#example'
-  get 'recommender1a' => 'the_movie_recommender#recommender1a'
-  get 'recommender1b' => 'the_movie_recommender#recommender1b'
 
-  # Start of code for Task4 added by rruchi
-  get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
-  post 'aAddMovieReview' => 'movie_controller#submitMovieReview'
-  get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
-  # End of code for Task4 added by rruchi
+get 'example' => 'static_pages#example'
+get 'recommender1a' => 'the_movie_recommender#recommender1a'
+get 'recommender1b' => 'the_movie_recommender#recommender1b'
+get '/movies', to: 'movies#index', as: 'studios'
+get '/movies/new', to: 'movies#new', as: 'new_studio'
+post '/movies', to: 'movies#create'
+get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
+post 'aAddMovieReview' => 'movie_controller#submitMovieReview'
+get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
+get 'movie-delete' => 'static_pages#movie-delete'
+get 'movie-index' => 'static_pages#movie-index'
+get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
+get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
+get 'hw5a' => 'my_static_pages#hw5a'
+get 'hw5b' => 'my_static_pages#hw5b'
 
-  get 'movie-delete' => 'static_pages#movie-delete'
-  get 'movie-index' => 'static_pages#movie-index'
-  get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
-  get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
-  get 'hw5a' => 'my_static_pages#hw5a'
-  get 'hw5b' => 'my_static_pages#hw5b'
+  
+
 
 
 
