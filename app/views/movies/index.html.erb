@@ -1,0 +1,26 @@
+<% provide(:title, " | Studio-Index") %>
+<H1>The Movie Recommender</H1>
+<H2>Studios Index</H2>
+<i>This page lists all the studios.</i>
+<br>
+<br>
+
+<table style="width:100%" border="enable">
+	<tr align="center">
+		<td><b>Studio Name</b></td>
+		<td><b>Studio Address</b></td>
+		<td><b>Studio URL</b></td>
+		<td rowspan="8"><b>All Studios</b></td>
+	</tr>
+	<% @studios.each do |studio| %>
+	<tr>
+    	<td><%= studio.name%></td>
+    	<td><%= studio.address%></td>
+    	<td><%= studio.url%></td>
+  	</tr>
+  	<%end%>
+</table>
+<hr>
+<%= link_to "HOME", root_path %>
+
+  

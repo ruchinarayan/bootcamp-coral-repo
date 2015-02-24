@@ -1,0 +1,21 @@
+<% provide(:title, " | Studio-Add") %>
+<!DOCTYPE html>
+
+<H1>The Movie Recommender</H1>
+<H2>Add-Studio</H2>
+Add a Studio name, Address, and URL and hit Save
+
+
+<ul>
+	<%= form_for(@studio) do |f| %>
+<li><%= f.label :Studio_Name %><br>
+<%= f.text_field :name %></li>
+<li><%= f.label :Studio_address %><br>
+<%= f.text_field :address %></li>
+<li><%= f.label :Studio_url %><br>
+<%= f.text_field :url %></li>
+<br><%= f.submit %>
+<% end %>
+</ul>
+<hr>
+<%= link_to "HOME", root_path %>

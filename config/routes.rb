@@ -1,3 +1,4 @@
+
 # mfshamim
 Rails.application.routes.draw do
   root 'static_pages#home' 
@@ -20,17 +21,36 @@ Rails.application.routes.draw do
   get 'recommender1a' => 'the_movie_recommender#recommender1a'
   get 'recommender1b' => 'the_movie_recommender#recommender1b'
 
-  get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
-  get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
 
-  get 'movie-delete' => 'static_pages#movie-delete'
-  get 'movie-index' => 'static_pages#movie-index'
+get '/people', to: 'people#index', as: 'people'
+get '/people/new', to: 'people#new', as: 'new_people'
+post '/people', to: 'people#create'
 
-  get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
-  get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
+get '/people/:id', to: 'people#show', as: 'person'
+get '/people/:id/edit', to: 'people#edit', as: 'edit_person'
+patch '/people/:id', to: 'people#update'
+put '/people/:id', to: 'people#update'
 
-  get 'hw5a' => 'my_static_pages#hw5a'
-  get 'hw5b' => 'my_static_pages#hw5b'
+delete '/people/:id', to: 'people#destroy'
+
+get 'example' => 'static_pages#example'
+get 'recommender1a' => 'the_movie_recommender#recommender1a'
+get 'recommender1b' => 'the_movie_recommender#recommender1b'
+get '/movies', to: 'movies#index', as: 'studios'
+get '/movies/new', to: 'movies#new', as: 'new_studio'
+post '/movies', to: 'movies#create'
+get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
+post 'aAddMovieReview' => 'movie_controller#submitMovieReview'
+get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
+get 'movie-delete' => 'static_pages#movie-delete'
+get 'movie-index' => 'static_pages#movie-index'
+get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
+get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
+get 'hw5a' => 'my_static_pages#hw5a'
+get 'hw5b' => 'my_static_pages#hw5b'
+
+  
+
 
 
 
@@ -87,5 +107,9 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
+<<<<<<< HEAD
  # =   end
+=======
+
+>>>>>>> 123aaf13c6b8caebbde96e31254aaca6f24cc72e
 end

@@ -11,15 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20150212125157) do
 
-ActiveRecord::Schema.define(version: 20150209185507) do
-
-  create_table "theaters", force: :cascade do |t|
-    t.string   "theater_name"
-    t.string   "theater_address"
-    t.string   "theater_phone"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table "movies", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 
@@ -29,6 +27,29 @@ ActiveRecord::Schema.define(version: 20150209185507) do
     t.date     "dob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "stars"
+    t.string   "title"
+    t.string   "commentary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "studios", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "theaters", force: :cascade do |t|
+    t.string   "theater_name"
+    t.string   "theater_address"
+    t.string   "theater_phone"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 end

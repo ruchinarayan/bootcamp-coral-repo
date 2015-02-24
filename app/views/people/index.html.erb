@@ -1,0 +1,31 @@
+<!--cpchmpll-->
+<h1>The Movie Recommender</h1>
+<p>
+<h2>Stars Index</h2>
+<p>
+<i>This page thsts all stars in our database</i>
+<p>
+
+
+
+<table border="2" style="width:100%">
+<tr><center><th>First Name</th>
+	<th>Last Name</th>
+	<th>Date of Birth</th>	
+<td rowspan="7" bgcolor="yellow"><center><b>All Users</b></center></td>
+<th>Links</th></center>
+</tr>
+<tr>
+<% @people.each do |person| %>
+<td><center><%= person.first_name %><center></td>
+<td><center><%= person.last_name %></center></td>
+<td><center><%= person.dob %></center></td>
+<td>[<%= link_to "Show", person_path(person) %>,
+<%= link_to "Edit", edit_person_path(person) %>,
+<%= link_to "Delete", person_path(person), method: :delete %>]</td>
+ </tr>
+<% end %>
+</table>
+<p>
+	<%= link_to "Add New Person", new_people_path %>
+</p>

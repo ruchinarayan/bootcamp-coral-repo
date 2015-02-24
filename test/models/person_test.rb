@@ -16,8 +16,8 @@ class PersonTest < ActiveSupport::TestCase
 	
 
 	def setup
-    @person = Person.new(first_name: "chaitanya", last_name: "pochampally", dob: Date.new(1989,1,1))
-    end
+		@person = Person.new(first_name: "chaitanya", last_name: "pochampally", dob: Date.new(1989,1,1))
+	end
         test "first name should be maximum of 50 characters" do
            @person.first_name="chaitanyachaitanyachaitanyachaitanyachaitanyachaitanya"       
             assert_not @person.valid?

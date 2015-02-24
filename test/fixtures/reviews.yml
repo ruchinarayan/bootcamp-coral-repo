@@ -1,23 +1,23 @@
 # == Schema Information
 #
-# Table name: people
+# Table name: reviews
 #
 #  id         :integer          not null, primary key
-#  first_name :string
-#  last_name  :string
-#  dob        :date
+#  stars      :integer
+#  title      :string
+#  commentary :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  first_name: Chaitanya
-  last_name: Pochampally
-  dob: 1990-07-19
+queen:
+  stars: 5
+  title: queen
+  commentary: Movie
 
 two:
-  first_name: Sachin
-  last_name: Tendulkar
-  dob: 1980-02-09
+  stars: 4
+  title: ABCD
+  commentary: Okay
