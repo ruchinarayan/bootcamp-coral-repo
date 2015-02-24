@@ -87,6 +87,5 @@ get 'hw5b' => 'my_static_pages#hw5b'
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
-=end
+
 end
