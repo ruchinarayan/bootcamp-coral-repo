@@ -1,6 +1,21 @@
+# mfshamim
 Rails.application.routes.draw do
- 
   root 'static_pages#home' 
+  
+  get '/theaters', to: 'theaters#index', as: 'theaters'
+
+  get '/theaters/new', to: 'theaters#new', as: 'new_theater'
+  post '/theaters', to: 'theaters#create'
+
+  get '/theaters/:id', to: 'theaters#show', as: 'theater'
+
+  get '/theaters/:id/edit', to: 'theaters#edit', as: 'edit_theater'
+  patch '/theaters/:id', to: 'theaters#update'
+  put '/theaters/:id', to: 'theaters#update'
+
+  delete '/theaters/:id', to: 'theaters#destroy'
+ 
+  
   get 'example' => 'static_pages#example'
   get 'recommender1a' => 'the_movie_recommender#recommender1a'
   get 'recommender1b' => 'the_movie_recommender#recommender1b'
@@ -72,5 +87,5 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+ # =   end
 end

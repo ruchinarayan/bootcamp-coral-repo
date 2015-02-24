@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20150209185507) do
     t.string   "theater_phone"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
 
-ActiveRecord::Schema.define(version: 20150209165320) do
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
@@ -31,5 +31,4 @@ ActiveRecord::Schema.define(version: 20150209165320) do
     t.datetime "updated_at", null: false
 
   end
-
 end
