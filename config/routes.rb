@@ -16,11 +16,6 @@ Rails.application.routes.draw do
 
   delete '/theaters/:id', to: 'theaters#destroy'
  
-  
-  get 'example' => 'static_pages#example'
-  get 'recommender1a' => 'the_movie_recommender#recommender1a'
-  get 'recommender1b' => 'the_movie_recommender#recommender1b'
-
 
 get '/people', to: 'people#index', as: 'people'
 get '/people/new', to: 'people#new', as: 'new_people'
@@ -107,9 +102,4 @@ get 'hw5b' => 'my_static_pages#hw5b'
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-<<<<<<< HEAD
- # =   end
-=======
-
->>>>>>> 123aaf13c6b8caebbde96e31254aaca6f24cc72e
-end
+    end
