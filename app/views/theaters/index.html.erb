@@ -1,27 +1,30 @@
-<h1>Theaters#index</h1>
-<h1>mfshamim</h1>
-
-<table>
+<!-- <h1>mfshamim</h1> -->
+<H1>The Movie Recommender</H1>
+<H2>Theater Index</H2>
+<table border="3" style="width:100%">
+    <tr>
+    <th colspan="4">All Theathers</th>
+  </tr>
 	<tr>
-		<td>Theater Name</td>
-		<td>Theater Address</td>
-		<td>Theater Phone Number</td>
-		<td>Links</td>
+		<th><b>Theater Name</b></th>
+		<th><b>Theater Phone Number</b></th>
+		<th><b>Theater Address</b></th>
+		<th><b>Links</b></th>
 	</tr>
 <% @theaters.each do |theater|%>
 	<tr>
 		<td><%= theater.theater_name %></td>
-		<td><%= theater.theater_address %></td>
 		<td><%= theater.theater_phone %></td>
-		<td>[<%= link_to "Show", theater_path(theater) %>,
-			 <%= link_to "Edit", edit_theater_path(theater) %>,
-			 <%= link_to "Delete", theater_path(theater), method: :delete %>]
+		<td><%= theater.theater_address %></td>
+		<td>[
+			 <%= link_to "Update", edit_theater_path(theater) %>]
 		</td>
 	</tr>
 <% end %>
 </table>
-
+<p><i>This page lists all the Theaters.</i></p>
+<hr>
 <p>
-	<%= link_to "Create New Theater", new_theater_path %>
+	<%= link_to "HOME", root_path %>
 </p>
 

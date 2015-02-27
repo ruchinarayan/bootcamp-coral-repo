@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20150212125157) do
     t.datetime "updated_at", null: false
   end
 
-
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -52,4 +51,5 @@ ActiveRecord::Schema.define(version: 20150212125157) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
 end
