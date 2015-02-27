@@ -25,7 +25,11 @@
 <%= link_to "Delete", person_path(person), method: :delete %>]</td>
  </tr>
 <% end %>
-</table>
+</table><%= link_to "Add New Person", new_people_path %>
+<br><hr>
+
 <p>
-	<%= link_to "Add New Person", new_people_path %>
+	<%= link_to "HOME", root_path %>
 </p>
+
+

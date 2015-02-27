@@ -4,22 +4,23 @@
  
 
 
-get '/people', to: 'people#index', as: 'people'
+  get '/people', to: 'people#index', as: 'people'
 
-get '/people/new', to: 'people#new', as: 'new_people'
-post '/people', to: 'people#create'
+  get '/people/new', to: 'people#new', as: 'new_people'
+  post '/people', to: 'people#create'
 
   get '/people/:id', to: 'people#show', as: 'person'
 
-get '/people/:id/edit', to: 'people#edit', as: 'edit_person'
-patch '/people/:id', to: 'people#update'
-put '/people/:id', to: 'people#update'
+  get '/people/:id/edit', to: 'people#edit', as: 'edit_person'
+  patch '/people/:id', to: 'people#update'
+  put '/people/:id', to: 'people#update'
 
-delete '/people/:id', to: 'people#destroy'
-=begin
->>>>>>> hw5-task5
+  delete '/people/:id', to: 'people#destroy'
+ 
   root 'static_pages#home' 
   get 'example' => 'static_pages#example'
+
+=begin
   get 'recommender1a' => 'the_movie_recommender#recommender1a'
   get 'recommender1b' => 'the_movie_recommender#recommender1b'
   get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
@@ -30,7 +31,7 @@ delete '/people/:id', to: 'people#destroy'
   get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
   get 'hw5a' => 'my_static_pages#hw5a'
   get 'hw5b' => 'my_static_pages#hw5b'
-
+=end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -87,5 +88,5 @@ delete '/people/:id', to: 'people#destroy'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-=end
+
 end
