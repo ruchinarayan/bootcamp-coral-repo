@@ -1,0 +1,14 @@
+<h1>Edit Studios</h1>
+<ul>
+	<%= form_for(@studio) do |f| %>
+<li><%= f.label :Studio_Name %><br>
+<%= f.text_field :name %></li>
+<li><%= f.label :Studio_address %><br>
+<%= f.text_field :address %></li>
+<li><%= f.label :Studio_url %><br>
+<%= f.text_field :url %></li>
+<br><%= f.submit %>
+<% end %>
+</ul>
+<hr>
+<%= link_to "HOME", root_path %>
