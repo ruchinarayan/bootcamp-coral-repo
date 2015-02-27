@@ -9,11 +9,11 @@ Add a Studio name, Address, and URL and hit Save
 <ul>
 	<%= form_for(@studio) do |f| %>
 <li><%= f.label :Studio_Name %><br>
-<%= f.text_field :name %></li>
+<%= f.text_field :name, :size=>"50" %></li>
 <li><%= f.label :Studio_address %><br>
-<%= f.text_field :address %></li>
+<%= f.text_field :address, :size=>"100" %></li>
 <li><%= f.label :Studio_url %><br>
-<%= f.text_field :url %></li>
+<%= f.text_field :url, :size=>"100" %></li>
 <br><%= f.submit %>
 <% end %>
 </ul>
