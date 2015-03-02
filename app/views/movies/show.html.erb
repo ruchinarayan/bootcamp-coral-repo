@@ -1,8 +1,16 @@
+<h1>Studio Details</h1>
 <Studio>
 	<ul>
 		<li>Studio Name: <%= @studio.name %></li>
 		<li>Studio address: <%= @studio.address %></li>
 		<li>Studio URL: <%= @studio.url %></li>
+		<li>Movies:
+			<ul>
+			<% @studio.movies.each do |movie| %>
+    	    <li><%= movie.title %>,
+    	    <%= movie.year %>
+    	    <% end %></li>
+    	</ul></li>
 	</ul>
 <p> <%= link_to "Show All Studios", studios_path %>
 </p>
