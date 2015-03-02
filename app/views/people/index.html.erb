@@ -12,17 +12,22 @@
 <tr><center><th>First Name</th>
 	<th>Last Name</th>
 	<th>Date of Birth</th>	
-<td rowspan="10" bgcolor="yellow"><center><b>All Users</b></center></td>
-<th>Links</th></center>
+	<th>Films</th></center>
+    <th>Links</th></center>
+    <td rowspan="10" bgcolor="yellow"><center><b>All Users</b></center></td>
 </tr>
 <tr>
 <% @people.each do |person| %>
 <td><center><%= person.first_name %><center></td>
 <td><center><%= person.last_name %></center></td>
 <td><center><%= person.dob %></center></td>
-<td>[<%= link_to "Show", person_path(person) %>,
+<td><center>
+<% person.movies.each do |movie| %>
+					<%= movie.title %> (<%= movie.year%>)
+								<%=  "," %><% end %></center></td>
+<td><center>[<%= link_to "Show", person_path(person) %>,
 <%= link_to "Edit", edit_person_path(person) %>,
-<%= link_to "Delete", person_path(person), method: :delete %>]</td>
+<%= link_to "Delete", person_path(person), method: :delete %>]</center></td>
  </tr>
 <% end %>
 </table><%= link_to "Add New Person", new_people_path %>

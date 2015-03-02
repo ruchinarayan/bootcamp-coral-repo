@@ -14,9 +14,12 @@
 
 class Person < ActiveRecord::Base
 	
+	has_many :movies
 	validates :first_name, allow_blank: true, length: {maximum: 50}
 	validates :last_name, length: {maximum: 50}, presence: true
 	validates_inclusion_of :dob, :in => Date.new(1890,1,1)..Date.current, presence:true
+
+
 	#validates :validatedate
 
 
