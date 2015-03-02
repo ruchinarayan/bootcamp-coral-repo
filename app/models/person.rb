@@ -10,13 +10,16 @@
 #  dob        :date
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-# Task done by cpchmpll
+#
 
 class Person < ActiveRecord::Base
 	
+	has_many :movies
 	validates :first_name, allow_blank: true, length: {maximum: 50}
 	validates :last_name, length: {maximum: 50}, presence: true
 	validates_inclusion_of :dob, :in => Date.new(1890,1,1)..Date.current, presence:true
+
+
 	#validates :validatedate
 
 
@@ -27,4 +30,8 @@ class Person < ActiveRecord::Base
 	 #end
 #	end
 	##
+
+	has_many :reviews,
+	          class_name: "Review",
+	          foreign_key: "person_id"
 end

@@ -4,9 +4,32 @@
 		<li> First Name: <%= @person.first_name %></li>
 		<li> Last Name: <%= @person.last_name %> </li>
 		<li> DOB: <%= @person.dob %> </li>
+
+		<li>Movie Reviews:
+			<ul>
+				<% @person.reviews.each do |review| %>
+				<li>Title: <%= review.title %></li>
+				<li>Stars: <%= review.stars %></li>
+				<li>Commentary: <%= review.commentary %></li>
+				<% end %>
+			</ul>
+		</li>
+
+				<li>Movies:
+		<ul>
+			<% @person.movies.each do |movie| %>
+					<li><%= movie.title %> (<%= movie.year%>)</li>
+			<% end %>
+		</ul>
+
+	</li>
+</ul>
+
+
 	</ul>
 
 	<p>
 		<%= link_to "Show all People", people_path %>
 	</p>
+
 <%= link_to "HOME", root_path %>

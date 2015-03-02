@@ -4,7 +4,7 @@
 		<h2>Movie Review Index</h2>
 		<table border="1">
 			<tr>
-				<th colspan=3 align="center">
+				<th colspan=5 align="center">
 					All Reviews
 				</th>
 			</tr>
@@ -12,17 +12,29 @@
 				<th>Movie Title</th>
 				<th>Movie Stars</th>
 				<th>Commentary</th>
+				<th>Author</th>
+				<th>Links</th>
 			</tr>
 			 <% @reviews.each do |review|%>
 			<tr>
 				<td><%= review.title %></td>
-<td><%= review.stars %></td>
-<td><%= review.commentary %></td>
+                <td><%= review.stars %></td>
+                <td><%= review.commentary %></td>
+                
+               <td><%= (review.person_id != nil) ? (  @people.find(review.person_id).first_name ) : ("N/A") %> 
+               	<%= (review.person_id != nil) ? (  @people.find(review.person_id).last_name ) : ("N/A") %></td>
+                <td>[<%= link_to "Show", review_path(review) %>],
+                	[<%= link_to "Edit", edit_review_path(review) %>],
+                	[<%= link_to "Delete", review_path(review), method: :delete %>]</td>
 			</tr>
 			<% end %>
 			
 		</table>
+		
 		<i>This page lists all movies reviews</i>
 		<hr>
+<p>
+	<%= link_to "New Movie Review", new_review_url %>
+</p>
 
 <%= link_to "Home", root_path %>

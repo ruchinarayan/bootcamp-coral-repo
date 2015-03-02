@@ -11,6 +11,7 @@
 		<center><b><%= f.label :first_name %></b></center>
 		<%= f.text_field :first_name %>
 	</td>
+
 	<td>
 		<center><b><%= f.label :last_name %></b></center>
 		<%= f.text_field :last_name %>
@@ -20,11 +21,21 @@
 		<%= f.text_field :dob %>
 	</td>
 </tr>
+
 </table>
 
 <%= f.submit %>
+
+<tr>
+
+<td></td><td><%= f.submit %>
+<%= f.submit :Cancel%></td><td></td>
+</table>
+
+
 <% end %>
 <p>Add a person First name, Last name, and DOB and hit Create Person</p>
 <br><hr>
+
 
 <%= link_to "HOME", root_path %>

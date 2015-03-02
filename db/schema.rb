@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212125157) do
+ActiveRecord::Schema.define(version: 20150302171532) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.integer  "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "person_id"
   end
+
+  add_index "movies", ["person_id"], name: "index_movies_on_person_id"
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
@@ -34,7 +37,12 @@ ActiveRecord::Schema.define(version: 20150212125157) do
     t.string   "commentary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "review_id"
+    t.integer  "person_id"
   end
+
+  add_index "reviews", ["person_id"], name: "index_reviews_on_person_id"
+  add_index "reviews", ["review_id"], name: "index_reviews_on_review_id"
 
   create_table "studios", force: :cascade do |t|
     t.string   "name"
@@ -42,7 +50,10 @@ ActiveRecord::Schema.define(version: 20150212125157) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "theater_id"
   end
+
+  add_index "studios", ["theater_id"], name: "index_studios_on_theater_id"
 
   create_table "theaters", force: :cascade do |t|
     t.string   "theater_name"
