@@ -1,19 +1,34 @@
 <!--cpchmpll-->
-<h1>Add New Person</h1>
+<h1>The Movie Recommender</h1>
+<p>
+<h2>Add a Person</h2>
+<p>
 
 <%= form_for(@person) do |f| %>
-	<p>
-		<%= f.label :first_name %><br>
+<table>
+	<tr>
+	<td>
+		<center><b><%= f.label :first_name %></b></center>
 		<%= f.text_field :first_name %>
-	</p>
-	<p>
-		<%= f.label :last_name %><br>
+	</td>
+
+	<td>
+		<center><b><%= f.label :last_name %></b></center>
 		<%= f.text_field :last_name %>
-	</p>
-	<p>
-		<%= f.label :dob %><br>
+	</td>
+	<td>
+		<center><b><%= f.label :Date_of_Birth %></b></center>
 		<%= f.text_field :dob %>
-	</p>
-	<p><%= f.submit %></p>
-	
+	</td>
+</tr>
+<tr>
+
+<td></td><td><%= f.submit %>
+<%= f.submit :Cancel%></td><td></td>
+</table>
+
 <% end %>
+<p>Add a person First name, Last name, and DOB and hit Create Person</p>
+<br><hr>
+
+<%= link_to "HOME", root_path %>
