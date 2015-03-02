@@ -33,3 +33,27 @@ Studio.create(name:'Screen Gems',address:'Culver City, California, USA',url:'eue
 Studio.create(name:'Sony Pictures Classics',address:'550 Madison Ave., 8th Floor, New York, NY 10022',url:'www.sonyclassics.com')
 Studio.create(name:'DreamWorks Animatio',address:'Glendale, California, USA',url:'http://www.dreamworksstudios.com')
 
+
+Person.create(first_name: 'Ruchi', 
+	          last_name: 'Ruchi',
+	          dob: Date.new(2013,1,1),
+ 
+              reviews: Review.create([
+               {title: 'ABC1', stars: 5,commentary: "good"},
+               {title: 'ABC2', stars: 3,commentary: "good"},
+               {title: 'ABC3', stars: 4,commentary: "good"}
+
+              	])
+	         )
+
+Person.create(first_name: 'Renu', 
+	          last_name: 'Renu',
+	          dob: Date.new(2013,1,1),
+ 
+              reviews: Review.create([
+               {title: 'XYZ1', stars: 5,commentary: "good"},
+               {title: 'XYZ2', stars: 3,commentary: "good"},
+               {title: 'XYZ3', stars: 4,commentary: "good"}
+
+              	])
+	         )

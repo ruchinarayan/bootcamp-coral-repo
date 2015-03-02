@@ -9,7 +9,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-# Task done by ssgoli
+
 class Studio < ActiveRecord::Base
 	validates :name, presence: true, length: { maximum: 50}
 	validates :address, length: { maximum: 100}, allow_blank: true

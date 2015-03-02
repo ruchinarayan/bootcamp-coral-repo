@@ -10,7 +10,7 @@
 #  dob        :date
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-# Task done by cpchmpll
+#
 
 class Person < ActiveRecord::Base
 	
@@ -27,4 +27,8 @@ class Person < ActiveRecord::Base
 	 #end
 #	end
 	##
+
+	has_many :reviews,
+	          class_name: "Review",
+	          foreign_key: "person_id"
 end
