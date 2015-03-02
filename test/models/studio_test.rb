@@ -8,7 +8,10 @@
 #  url        :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-# Task done by ssgoli
+#  theater_id :integer
+
+
+#
 
 require 'test_helper'
 

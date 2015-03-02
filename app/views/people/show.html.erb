@@ -4,6 +4,15 @@
 		<li> First Name: <%= @person.first_name %></li>
 		<li> Last Name: <%= @person.last_name %> </li>
 		<li> DOB: <%= @person.dob %> </li>
+		<li>Movie Reviews:
+			<ul>
+				<% @person.reviews.each do |review| %>
+				<li>Title: <%= review.title %></li>
+				<li>Stars: <%= review.stars %></li>
+				<li>Commentary: <%= review.commentary %></li>
+				<% end %>
+			</ul>
+		</li>
 	</ul>
 
 	<p>

@@ -1,57 +1,41 @@
-<% provide(:title, "Review-Add") %>
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<h1>The Movie Recommender</h1>
+<% provide(:title, 'Review-Add') %>
 
-<table border=1>
+		<h1>The Movie Recommender</h1>
+		<%= form_for :addReview do |review| %>
 
-<tr>
-<td><h2>Add a Review</h2></td>
-</tr
-
-<tr>
-<td>Movie Title : </td>
-<td><input type="text" name="movieTitle"></td>
-</tr>
-
-<tr>
-<td>Movie Starts :</td>
-<td>
-<select>
-<option value="star1">1 Star</option>
-<option value="star2">2 Star</option>
-<option value="star3">3 Star</option>
-<option value="star4">4 Star</option>
-<option value="star5">5 Star</option>
-</select>
-</td>
-</tr>
-
-<tr>
-<td>Commentatory :</td>
-<td>
-<textarea>
-</textarea>
-</td>
-</tr>
-
-<tr>
-<td><button type="button">Add Review</button></td>
-<td><button type="button">Cancel</button></td>
-</tr>
-
-<tr>
-<td>Rate the movie and leave comment in the text area above</td>
-</tr>
-</table>
-
-<hr>
-
+		<table border="1">
+			<tr>
+				<td colspan=2 align="middle">
+					<h2>Add a Review</h2>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Movie Title:</td>
+				<td><%= review.text_field :title %></td>
+			</tr>
+				<td>Movie Stars:</td>
+				<td><%= review.select(:stars, options_for_select([['1 Star','1'],['2 Star','2'],['3 Star', '3'],['4 Star','4'],['5 Star','5']])) %></td>
+			</tr>
+			<tr>
+				<td>Commentary:</td>
+				 <td><%= review.text_field :commentary %></td>
+			</tr>
+			<tr>
+				<td><%= review.submit 'Add Review'%></td>
+				<% end %>
+				<td align="right">
+					<button type="button" onclick="alert('Dummy Message: Non Functional Button')">
+						Cancel
+					</button>
+				</td>
+			</tr>
+			<tr>	
+				<td colspan=2>
+					<i>Rate the movie and leave a comment in the text area above</i>
+				</td>
+			</tr>
+		</table>
+		<hr>
 
 <%= link_to "Home", root_path %>
-
-</body>
-</html>

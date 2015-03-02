@@ -1,0 +1,24 @@
+<!-- mfshamim -->
+<H1>The Movie Recommender</H1>
+<H2>Update Theater</H2>
+<%= form_for(@theater) do |f| %>
+<table>
+  <tr>
+    <td><li><%= f.label :theater_name %></li></td>
+    <td><%= f.text_field :theater_name %><br></td>
+  </tr>
+ <tr>
+    <td><li><%= f.label :theater_address %></li></td>
+    <td><%= f.text_field :theater_address %></td>
+  </tr>
+ <tr>
+    <td><li><%= f.label :theater_phone %></li></td>
+    <td><%= f.text_field :theater_phone %><br></td>
+ </tr> 
+    <td align="right"><%= f.submit %></td>
+    <td><button type="Cancel" value="Cancel">Cancel</button><br></td>
+ </table>
+<p><i>Update theater Information and click Update</i></p>
+<hr>
+<%= link_to "HOME", root_path %>
+<% end %>

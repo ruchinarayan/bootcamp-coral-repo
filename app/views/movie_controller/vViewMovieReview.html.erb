@@ -1,56 +1,40 @@
-<% provide(:title, "Review-Index") %>
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<h1>The Movie Recommender</h1>
+<% provide(:title, 'Review-Index') %>
 
-<h2>Movie Review Index</h2>
-
-<table border=1>
-
-<tr>
-<td>All Reviews</td>
-</tr>
-
-<tr>
-<td>Movie Title</td>
-<td>Movie Stars</td>
-<td>Commentary</td>
-</tr>
-
-<tr>
-<td>Taken 3</td>
-<td>3</td>
-<td>Nearly seven years after the first film became s surprise hit, we are onto the second Taken sequel.<br>
-While the story lines might be getting thinner, the fun and exicitement is still there, for the most part.</td>
-<tr>
-
-
-<tr>
-<td>Taken 3</td>
-<td>4</td>
-<td>Worth watching</td>
-<tr>
-
-
-<tr>
-<td>Taken 3</td>
-<td>3</td>
-<td></td>
-<tr>
-
-</table>
-
-<br>
-<br>
-<i>This page lists all movies reviews</i>
-
-<hr>
-
+		<h1>The Movie Recommender</h1>
+		<h2>Movie Review Index</h2>
+		<table border="1">
+			<tr>
+				<th colspan=5 align="center">
+					All Reviews
+				</th>
+			</tr>
+			<tr>
+				<th>Movie Title</th>
+				<th>Movie Stars</th>
+				<th>Commentary</th>
+				<th>Author</th>
+				<th>Links</th>
+			</tr>
+			 <% @reviews.each do |review|%>
+			<tr>
+				<td><%= review.title %></td>
+                <td><%= review.stars %></td>
+                <td><%= review.commentary %></td>
+                
+               <td><%= (review.person_id != nil) ? (  @people.find(review.person_id).first_name ) : ("N/A") %> 
+               	<%= (review.person_id != nil) ? (  @people.find(review.person_id).last_name ) : ("N/A") %></td>
+                <td>[<%= link_to "Show", review_path(review) %>],
+                	[<%= link_to "Edit", edit_review_path(review) %>],
+                	[<%= link_to "Delete", review_path(review), method: :delete %>]</td>
+			</tr>
+			<% end %>
+			
+		</table>
+		
+		<i>This page lists all movies reviews</i>
+		<hr>
+<p>
+	<%= link_to "New Movie Review", new_review_url %>
+</p>
 
 <%= link_to "Home", root_path %>
-
-</body>
-</html>
