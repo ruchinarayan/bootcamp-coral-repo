@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/theaters/new', to: 'theaters#new', as: 'new_theater'
   post '/theaters', to: 'theaters#create'
 
-
+=begin
   get '/people', to: 'people#index', as: 'people'
 
   get '/people/new', to: 'people#new', as: 'new_people'
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
  
   root 'static_pages#home' 
   get 'example' => 'static_pages#example'
-
+end
 =begin
   get 'recommender1a' => 'the_movie_recommender#recommender1a'
   get 'recommender1b' => 'the_movie_recommender#recommender1b'
