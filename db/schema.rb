@@ -34,7 +34,12 @@ ActiveRecord::Schema.define(version: 20150302171532) do
     t.string   "commentary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "review_id"
+    t.integer  "person_id"
   end
+
+  add_index "reviews", ["person_id"], name: "index_reviews_on_person_id"
+  add_index "reviews", ["review_id"], name: "index_reviews_on_review_id"
 
   create_table "studios", force: :cascade do |t|
     t.string   "name"

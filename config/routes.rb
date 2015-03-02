@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   put '/theaters/:id', to: 'theaters#update'
   get '/theaters/5/edit', to: 'theaters#edit', as: 'edit1_theater'
   delete '/theaters/:id', to: 'theaters#destroy'
- 
+
 
 get '/people', to: 'people#index', as: 'people'
 get '/people/new', to: 'people#new', as: 'new_people'
@@ -34,9 +34,9 @@ get 'recommender1b' => 'the_movie_recommender#recommender1b'
 get '/movies', to: 'movies#index', as: 'studios'
 get '/movies/new', to: 'movies#new', as: 'new_studio'
 post '/movies', to: 'movies#create'
-get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
-post 'aAddMovieReview' => 'movie_controller#submitMovieReview'
-get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
+get 'aAddMovieReview', to: 'movie_controller#aAddMovieReview', as: "new_review"
+post 'aAddMovieReview', to: 'movie_controller#submitMovieReview'
+get 'vViewMovieReview', to: 'movie_controller#vViewMovieReview', as: "reviews"
 get 'movie-delete' => 'static_pages#movie-delete'
 get 'movie-index' => 'static_pages#movie-index'
 get 'mfshamimTask2a' => 'my_static_pages#mfshamimTask2a'
@@ -44,7 +44,14 @@ get 'mfshamimTask2b' => 'my_static_pages2#mfshamimTask2b'
 get 'hw5a' => 'my_static_pages#hw5a'
 get 'hw5b' => 'my_static_pages#hw5b'
 
-  
+
+get '/vViewMovieReview/:id', to: 'movie_controller#show', as: "review"
+get '/vViewMovieReview/:id/edit', to: 'movie_controller#edit', as: "edit_review"
+
+patch '/vViewMovieReview/:id', to: 'movie_controller#update'
+put '/vViewMovieReview/:id', to: 'movie_controller#update'
+
+delete '/vViewMovieReview/:id', to: 'movie_controller#destroy'
 
 
 
@@ -103,5 +110,6 @@ get 'hw5b' => 'my_static_pages#hw5b'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
 
-    end
+end
+
 

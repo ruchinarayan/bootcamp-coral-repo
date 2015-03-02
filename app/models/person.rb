@@ -27,4 +27,8 @@ class Person < ActiveRecord::Base
 	 #end
 #	end
 	##
+
+	has_many :reviews,
+	          class_name: "Review",
+	          foreign_key: "person_id"
 end

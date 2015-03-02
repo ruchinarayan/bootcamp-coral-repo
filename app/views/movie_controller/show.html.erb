@@ -1,0 +1,18 @@
+<h1>Movie Review</h1>
+
+<ul>
+    <li>Movie Title: <%= @review.title %></li>
+    <li>Movie Stars: <%= @review.stars %></li>
+    <li>Commentary: <%= @review.commentary %></li>
+    <li>Reviews Given by following person :
+			<ul>
+				<% @reviews.person.each do |person| %>
+				<li><%= person.first_name %></li>
+				<% end %>
+			</ul>
+		</li>
+</ul>
+
+<p>
+    <%= link_to "Show All Reviews", reviews_path %>
+</p>

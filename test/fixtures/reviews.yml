@@ -8,6 +8,8 @@
 #  commentary :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  review_id  :integer
+#  person_id  :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -18,5 +18,4 @@ class Theater < ActiveRecord::Base
     validates :theater_phone, allow_blank: true, length: { maximum: 20 }
 	# validates_length_of :theater_name, :maximum => 50, :message => "less than %d if you don't mind"
 
-    
 end	
