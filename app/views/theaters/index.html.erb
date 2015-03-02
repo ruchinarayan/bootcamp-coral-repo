@@ -3,23 +3,30 @@
 <H2>Theater Index</H2>
 <table border="3" style="width:100%">
     <tr>
-    <th colspan="4">All Theathers</th>
+    <th colspan="5">All Theathers</th>
   </tr>
 	<tr>
 		<th><b>Theater Name</b></th>
 		<th><b>Theater Phone Number</b></th>
 		<th><b>Theater Address</b></th>
+		<th><b>Owners</b></th>
 		<th><b>Links</b></th>
 	</tr>
 <% @theaters.each do |theater|%>
 	<tr>
 		<td><%= theater.theater_name %></td>
 		<td><%= theater.theater_phone %></td>
-		<td><%= theater.theater_address %></td>
+        <td><%= theater.theater_address %></td>
+        <td>
+        	<% theater.studios.each do |studio| %>
+            <%= studio.name %>
+        </td>
 		<td>[
-			 <%= link_to "Update", edit_theater_path(theater) %>]
+			 <%= link_to "Update", edit_theater_path(theater) %>
+			 <%= link_to "Show", theater_path(theater) %>]
 		</td>
 	</tr>
+<% end %>
 <% end %>
 </table>
 <p><i>This page lists all the Theaters.</i></p>

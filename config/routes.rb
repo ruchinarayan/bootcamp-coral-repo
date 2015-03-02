@@ -13,15 +13,9 @@ Rails.application.routes.draw do
   get '/theaters/:id/edit', to: 'theaters#edit', as: 'edit_theater'
   patch '/theaters/:id', to: 'theaters#update'
   put '/theaters/:id', to: 'theaters#update'
-
+  get '/theaters/5/edit', to: 'theaters#edit', as: 'edit1_theater'
   delete '/theaters/:id', to: 'theaters#destroy'
  
-<<<<<<< HEAD
-=======
-  
-  get 'example' => 'static_pages#example'
-
->>>>>>> 2f5a221a71b8d20565524c9e478a80ee2b8ba749
 
 get '/people', to: 'people#index', as: 'people'
 get '/people/new', to: 'people#new', as: 'new_people'
@@ -108,8 +102,6 @@ get 'hw5b' => 'my_static_pages#hw5b'
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-<<<<<<< HEAD
+
     end
-=======
-end
->>>>>>> 2f5a221a71b8d20565524c9e478a80ee2b8ba749
+

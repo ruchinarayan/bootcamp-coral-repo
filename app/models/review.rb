@@ -8,7 +8,6 @@
 #  commentary :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  Task done by rruchi
 #
 
 class Review < ActiveRecord::Base

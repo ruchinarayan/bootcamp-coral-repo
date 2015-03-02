@@ -8,7 +8,7 @@
 #  theater_phone   :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  Task done by Mfshamim
+#
 
 require 'test_helper'
 

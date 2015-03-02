@@ -8,9 +8,11 @@
 #  url        :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  theater_id :integer
 #
-# Task done by ssgoli
+
 class Studio < ActiveRecord::Base
+	belongs_to :theaters
 	validates :name, presence: true, length: { maximum: 50}
 	validates :address, length: { maximum: 100}, allow_blank: true
 	validates :url, length: { maximum: 80}, allow_blank: true
