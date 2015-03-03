@@ -8,7 +8,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-<<<<<<< HEAD
 Theater.create(theater_name: 'Palace Cinema', theater_address: '5117 Old Summer Rd, Memphis, TN 3812', theater_phone: '901-455-1111',
 studios: Studio.create([
                 {name:'20th Century Fox'}
@@ -37,11 +36,6 @@ Theater.create(theater_name: 'New Century', theater_address: '3852 Audie Dr, Mem
 studios: Studio.create([
                 {name:'DreamWorks Animatio'}
               ]))
-
-Person.create(first_name: 'Chaitanya', last_name: 'Pochampally',dob: Date.new(1989,1,1))
-Person.create(first_name: 'Sindhu', last_name: 'Gandra', dob: Date.new(1990,1,1))
-Person.create(first_name: 'Dileep', last_name: 'Eligati', dob: Date.new(1994,1,1))
-Person.create(first_name: 'Atharva', last_name: 'Kunduru', dob: Date.new(2013,1,1))
 
 Review.create(stars: 5, title: 'Queen', commentary: 'Best movie of 2014')
 Review.create(stars: 4, title: 'Queen1', commentary: 'Best movie of 2014')
@@ -79,7 +73,7 @@ Person.create(first_name: 'Renu',
 
               	])
 	         )
-=======
+
 Person.create(first_name: 'Suraj', last_name: 'Sharma',dob: Date.new(1989,1,1),
 	movies: Movie.create([
 		{title: 'Life of Pie', year: 2012},
@@ -100,4 +94,4 @@ Person.create(first_name: 'Atharva', last_name: 'Kunduru', dob: Date.new(2013,1,
          {title: 'Anand', year: 2010},
          {title: 'Happy Days', year: 2009}
 		]))
->>>>>>> hw6-task5
+
