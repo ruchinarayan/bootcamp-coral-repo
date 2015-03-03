@@ -70,9 +70,7 @@ get 'movies/:id/edit', to: 'movies#edit', as: 'edit_studio'
 patch '/movies/:id', to: 'movies#update'
 put '/movies/:id', to: 'movies#update'
 delete '/movies/:id', to: 'movies#destroy'
-get 'aAddMovieReview' => 'movie_controller#aAddMovieReview'
-post 'aAddMovieReview' => 'movie_controller#submitMovieReview'
-get 'vViewMovieReview' => 'movie_controller#vViewMovieReview'
+
 get 'aAddMovieReview', to: 'movie_controller#aAddMovieReview', as: "new_review"
 post 'aAddMovieReview', to: 'movie_controller#submitMovieReview'
 get 'vViewMovieReview', to: 'movie_controller#vViewMovieReview', as: "reviews"
