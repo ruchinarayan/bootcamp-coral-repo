@@ -14,27 +14,25 @@
 	<th>Date of Birth</th>	
 	<th>Films</th></center>
     <th>Links</th></center>
-    <td rowspan="10" bgcolor="yellow"><center><b>All Users</b></center></td>
+   <td rowspan=<%= @people.length+1 %> bgcolor="yellow"><center><b>All Users</b></center></td>
 </tr>
 <tr>
 <% @people.each do |person| %>
 <td><center><%= person.first_name %><center></td>
 <td><center><%= person.last_name %></center></td>
 <td><center><%= person.dob %></center></td>
-<td><center>
-<% person.movies.each do |movie| %>
-					<%= movie.title %> (<%= movie.year%>)
-								<%=  "," %><% end %></center></td>
+<td><center><% person.movies.each do |movie| %>
+	    	<%= movie.title %> (<%= movie.year%>)
+			<%=  "," %><% end %></center></td>
 <td><center>[<%= link_to "Show", person_path(person) %>,
 <%= link_to "Edit", edit_person_path(person) %>,
 <%= link_to "Delete", person_path(person), method: :delete %>]</center></td>
  </tr>
-<% end %>
-</table><%= link_to "Add New Person", new_people_path %>
+ <% end %>
+</table>
+<%= link_to "Add New Person", new_people_path %>
 <br><hr>
 
 <p>
 	<%= link_to "HOME", root_path %>
 </p>
-
-

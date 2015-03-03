@@ -21,14 +21,15 @@
 		<%= f.text_field :dob %>
 	</td>
 </tr>
+
 <tr>
-
 <td></td><td><%= f.submit %>
-<%= f.submit :Cancel%></td><td></td>
+<%= f.submit :Cancel,type: "reset"%></td><td></td>
+</tr>
 </table>
-
 <% end %>
 <p>Add a person First name, Last name, and DOB and hit Create Person</p>
 <br><hr>
+
 
 <%= link_to "HOME", root_path %>

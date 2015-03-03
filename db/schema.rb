@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(version: 20150302171532) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "person_id"
+    t.integer  "studio_id"
   end
 
   add_index "movies", ["person_id"], name: "index_movies_on_person_id"
+  add_index "movies", ["studio_id"], name: "index_movies_on_studio_id"
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"

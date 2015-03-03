@@ -13,4 +13,23 @@ class MoviesController < ApplicationController
   		redirect_to movies_url
   	end
   end
+  def show
+    @studio= Studio.find(params[:id])
+  end
+  def edit
+    @studio = Studio.find(params[:id])
+  end
+  def update
+    @studio = Studio.find(params[:id])
+    if @studio.update(params.require(:studio).permit(:name,:address,:url))
+      redirect_to studio_url(studio)
+    else
+      redirect_to studio_url
+    end
+  end
+  def destroy
+    @studio = Studio.find(params[:id])
+    @studio.destroy
+    redirect_to studios_url
+  end
 end

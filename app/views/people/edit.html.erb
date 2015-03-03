@@ -1,22 +1,32 @@
 <!--cpchmpll-->
-<h1> Edit Person </h1>
+<h1>Edit Person</h1>
 
 <%= form_for(@person) do |f| %>
-	<p>
-		<%= f.label :first_name %><br>
+<table>
+	<tr>
+	<td>
+		<center><b><%= f.label :first_name %></b></center>
 		<%= f.text_field :first_name %>
-	</p>
-	<p>
-		<%= f.label :last_name %><br>
-		<%= f.text_field :last_name %>
-	</p>
-	<p>
-		<%= f.label :dob %><br>
-		<%= f.text_field :dob %>
-	</p>
-	<p>
-		<%= f.submit %>
-	</p>
+	</td>
 
+	<td>
+		<center><b><%= f.label :last_name %></b></center>
+		<%= f.text_field :last_name %>
+	</td>
+	<td>
+		<center><b><%= f.label :Date_of_Birth %></b></center>
+		<%= f.text_field :dob %>
+	</td>
+</tr>
+
+<tr>
+<td></td><td><center><%= f.submit :"Update Person" %></center></td>
+
+</tr>
+</table>
 <% end %>
+<p>Update a person First name, Last name, and DOB and Update Person</p>
+<br><hr>
+
+
 <%= link_to "HOME", root_path %>
