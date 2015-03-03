@@ -8,7 +8,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-<<<<<<< HEAD
+
 Theater.create(theater_name: 'Palace Cinema', theater_address: '5117 Old Summer Rd, Memphis, TN 3812', theater_phone: '901-455-1111',
 studios: Studio.create([
                 {name:'20th Century Fox'}
@@ -47,13 +47,41 @@ Review.create(stars: 5, title: 'Queen', commentary: 'Best movie of 2014')
 Review.create(stars: 4, title: 'Queen1', commentary: 'Best movie of 2014')
 Review.create(stars: 4, title: 'K2H2', commentary: 'Best movie of 2010')
 
-Studio.create(name:'20th Century Fox',address:'10201 W Pico Blvd, Los Angeles, CA 90064',url:'http://www.foxmovies.com')
-Studio.create(name:'Focus Features',address:'10201 30 Rockefeller Plaza. Building 5TS - 10th Floor, New York, NY 10112',url:'www.focusfeatures.com')
-Studio.create(name:'Universal Studios',address:'6000 Universal Boulevard Orlando, FL 32819',url:'www.universalstudios.com')
-Studio.create(name:'Columbia Pictures',address:'10202 W. Washington Blvd., Culver City, CA 90232',url:'www.columbiatristar.co.uk')
-Studio.create(name:'Screen Gems',address:'Culver City, California, USA',url:'euescreengems.com')
-Studio.create(name:'Sony Pictures Classics',address:'550 Madison Ave., 8th Floor, New York, NY 10022',url:'www.sonyclassics.com')
-Studio.create(name:'DreamWorks Animatio',address:'Glendale, California, USA',url:'http://www.dreamworksstudios.com')
+Studio.create(name:'20th Century Fox',address:'10201 W Pico Blvd, Los Angeles, CA 90064',url:'http://www.foxmovies.com',
+	movies: Movie.create([
+		{title:'The Maze Runner', year: 2014},
+		{title:'The Transporter', year: 2002}
+		]))
+Studio.create(name:'Focus Features',address:'10201 30 Rockefeller Plaza. Building 5TS - 10th Floor, New York, NY 10112',url:'www.focusfeatures.com',
+	movies: Movie.create([
+		{title:'The Boxtrolls', year: 2014},
+		{title:'The Painist', year: 2002}
+		]))
+Studio.create(name:'Universal Studios',address:'6000 Universal Boulevard Orlando, FL 32819',url:'www.universalstudios.com',
+	movies: Movie.create([
+		{title:'Jurassic Park', year: 1993},
+		{title:'The Mummy', year: 1999}
+		]))
+Studio.create(name:'Columbia Pictures',address:'10202 W. Washington Blvd., Culver City, CA 90232',url:'www.columbiatristar.co.uk',
+	movies: Movie.create([
+		{title:'Gladiator', year: 1992},
+		{title:'Ghosts of Mississippi', year: 1996}
+		]))
+Studio.create(name:'Screen Gems',address:'Culver City, California, USA',url:'euescreengems.com',
+	movies: Movie.create([
+		{title:'Underworld: Awakening', year: 2014},
+		{title:'Easy A', year: 2010}
+		]))
+Studio.create(name:'Sony Pictures Classics',address:'550 Madison Ave., 8th Floor, New York, NY 10022',url:'www.sonyclassics.com',
+	movies: Movie.create([
+		{title:'Chappie', year: 2015},
+		{title:'Men In Black II', year: 2002}
+		]))
+Studio.create(name:'DreamWorks Animatio',address:'Glendale, California, USA',url:'http://www.dreamworksstudios.com',
+	movies: Movie.create([
+		{title:'How to train your dragon', year: 2010},
+		{title:'Kung Fu Panda', year: 2008}
+		]))
 
 
 Person.create(first_name: 'Ruchi', 
@@ -79,7 +107,7 @@ Person.create(first_name: 'Renu',
 
               	])
 	         )
-=======
+
 Person.create(first_name: 'Suraj', last_name: 'Sharma',dob: Date.new(1989,1,1),
 	movies: Movie.create([
 		{title: 'Life of Pie', year: 2012},
@@ -100,4 +128,4 @@ Person.create(first_name: 'Atharva', last_name: 'Kunduru', dob: Date.new(2013,1,
          {title: 'Anand', year: 2010},
          {title: 'Happy Days', year: 2009}
 		]))
->>>>>>> hw6-task5
+

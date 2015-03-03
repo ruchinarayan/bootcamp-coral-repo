@@ -10,6 +10,7 @@
 		<td><b>Studio Name</b></td>
 		<td><b>Studio Address</b></td>
 		<td><b>Studio URL</b></td>
+		<td><b>Movies</b></td>
 		<td><b>Links</b></td>
 		<td rowspan=<%= @studios.length+1 %><b>All Studios</b></td>
 	</tr>
@@ -18,6 +19,10 @@
     	<td><%= studio.name%></td>
     	<td><%= studio.address%></td>
     	<td><%= studio.url%></td>
+    	<td><% studio.movies.each do |movie| %>
+    	    <%= movie.title %>;
+    	    
+    	    <% end %>  </td>
     	<td>[<%= link_to "show", studio_path(studio)%>    		
     		<%= link_to "edit", edit_studio_path(studio) %>
     		<%= link_to "delete", studio_path(studio), method: :delete, data: {confirm: "Are you sure?"} %>]</td>
@@ -28,5 +33,3 @@
 <b><%= link_to "create studio", new_studio_path%></b><br>
 <hr>
 <%= link_to "HOME", root_path %>	
-
-  
